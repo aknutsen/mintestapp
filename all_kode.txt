@@ -53,6 +53,21 @@ git push origin master
 mkdir .CIRCLECI
 sett opp config.yml
 
+-- LAG ENHETSTEST
+npm i mocha chai --save
+npm i request --save-dev
+
+mkdir test
+* lag fil test-pages.js
+var expect  = require('chai').expect;
+var request = require('request');
+
+it('Main page content', function(done) {
+    request('http://localhost:8080' , function(error, response, body) {
+        expect(body).to.equal('Hello World');
+        done();
+    });
+});
 
 
 -- LAG NY RUTE I APP OG LAG NY BRANCH
