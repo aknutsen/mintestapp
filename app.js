@@ -3,12 +3,15 @@ var port = process.env.PORT || 3000;
 var app = express();
 
 app.get('/', function (req, res) {
- res.send(JSON.stringify({ Hello: 'World'}));
+    res.send(JSON.stringify({ Hello: 'World'}));
 });
-
 
 app.get('/param/:first/:second', function (req, res) {
     res.send(req.params)
+});
+
+app.get('/about', function (req, res) {
+    res.send(JSON.stringify({ author: 'anders', company: 'test'}))
 });
 
 app.listen(port, function () {
