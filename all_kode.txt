@@ -1,3 +1,9 @@
+Nødvendig programvare:
+Git for windows
+Github Desktop
+Heroku CLI
+NodeJS
+
 Lag github-repo
 git clone <repo>
 
